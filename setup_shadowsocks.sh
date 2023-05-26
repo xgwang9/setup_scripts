@@ -17,6 +17,6 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 sudo usermod -aG docker ${USER}
 
 sudo apt install -y docker-compose
-#curl -sSLO https://github.com/shadowsocks/shadowsocks-libev/raw/master/docker/alpine/docker-compose.yml
+curl -sSLO https://raw.githubusercontent.com/xgwang9/setup_scripts/main/docker-compose.yml
 sudo docker-compose up -d
 sudo docker-compose ps

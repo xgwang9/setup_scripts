@@ -1,4 +1,5 @@
 #!/bin/bash
+## https://github.com/shadowsocks/shadowsocks-libev/blob/master/docker/alpine/README.md
 
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg

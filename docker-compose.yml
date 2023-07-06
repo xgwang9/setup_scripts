@@ -1,9 +1,10 @@
-shadowsocks:
-  image: shadowsocks/shadowsocks-libev
-  ports:
-    - "8388:8388/tcp"
-    - "8388:8388/udp"
-  environment:
-    - METHOD=aes-256-cfb
-    - PASSWORD=caroline
-  restart: always
+version: '3.7'
+services:
+  shadowsocks:
+    image: shadowsocks/shadowsocks-libev
+    ports:
+      - "8388:8388"
+    environment:
+      - METHOD=aes-256-cfb
+      - PASSWORD=caroline
+    restart: always

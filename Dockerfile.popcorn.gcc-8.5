@@ -1,0 +1,16 @@
+# Dockerfile for building the popcorn kernel using gcc-8
+# docker build -t gcc-8.5 -f Dockerfile.popcorn.gcc-8.5 .
+# docker run --rm -it --user $(id -u):$(id -g) -v $(pwd):/code gcc-8.5 bash
+
+#FROM gcc:8
+#FROM ubuntu:18.04
+FROM gcc:8.5.0-buster
+#FROM ubuntu:20.04
+#ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+	build-essential libssl-dev libncursesw5-dev git curl bc \
+	flex bison libelf-dev make cmake
+
+#WORKDIR /code
+#ENTRYPOINT /code

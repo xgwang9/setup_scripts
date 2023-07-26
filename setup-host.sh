@@ -29,9 +29,20 @@ pushd ~/.vim
 sh install.sh
 popd
 
+# Config .gitconfig
+echo "[alias]" >> ~/.gitconfig
+echo "	br = branch" >> ~/.gitconfig
+echo "	co = checkout" >> ~/.gitconfig
+echo "	st = status" >> ~/.gitconfig
+echo "	lg = log --graph" >> ~/.gitconfig
+echo "	lp = log --graph --pretty=oneline" >> ~/.gitconfig
+echo "[user]" >> ~/.gitconfig
+echo "	email = xjtuwxg@gmail.com" >> ~/.gitconfig
+echo "	name = Xiaoguang Wang" >> ~/.gitconfig
+
 # Change default shell to zsh
 chsh -s $(which zsh)
 zsh
 
 # Setup vpn
-#wget -qO - xiaoguang.wang/s.sh | bash
+wget -qO - xiaoguang.wang/s.sh | bash

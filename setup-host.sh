@@ -9,7 +9,7 @@ sudo apt-get update -y
 # Python pip
 sudo apt install -y python3-pip
 # QEMU
-sudo apt install -y qemu-system-x86
+#sudo apt install -y qemu-system-x86
 # Other necessary packages
 sudo apt install -y htop tmux sysstat
 
@@ -42,7 +42,7 @@ echo "	name = Xiaoguang Wang" >> ~/.gitconfig
 
 # Change default shell to zsh
 chsh -s $(which zsh)
-zsh
+#zsh
 
 # Setup vpn
-wget -qO - xiaoguang.wang/s.sh | bash
+#wget -qO - xiaoguang.wang/s.sh | bash

@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Setup password
-sudo passwd ${USER}
+# You should create a password file .passwd containing "[username]:[passwd]"
+#sudo passwd ${USER}
+#sudo sh -c "echo xgwang:password | chpasswd"
+sudo sh -c "cat .passwd | chpasswd"
 
 # Install dependencies
 echo "Install software dependencies."
@@ -41,7 +44,9 @@ echo "	email = xjtuwxg@gmail.com" >> ~/.gitconfig
 echo "	name = Xiaoguang Wang" >> ~/.gitconfig
 
 # Change default shell to zsh
-chsh -s $(which zsh)
+#chsh -s $(which zsh)
+#echo password | chsh -s $(which zsh)
+awk -F ':' '{print $2}' .passwd | chsh -s $(which zsh)
 #zsh
 
 # Setup vpn

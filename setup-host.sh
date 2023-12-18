@@ -4,6 +4,10 @@
 # You should create a password file .passwd containing "[username]:[passwd]"
 #sudo passwd ${USER}
 #sudo sh -c "echo xgwang:password | chpasswd"
+if [[ ! -f .passwd ]] ; then
+  echo "echo \"[username]:[passwd]\" > .passwd"
+  exit
+fi
 sudo sh -c "cat .passwd | chpasswd"
 
 # Install dependencies
@@ -14,7 +18,7 @@ sudo apt install -y python3-pip
 # QEMU
 #sudo apt install -y qemu-system-x86
 # Other necessary packages
-sudo apt install -y htop tmux sysstat
+sudo apt install -y htop tmux sysstat zsh
 
 ## Download VM image files from google drive
 #pip install gdown

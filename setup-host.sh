@@ -15,6 +15,9 @@ echo "Install software dependencies."
 sudo apt-get update -y
 # Python pip
 sudo apt install -y python3-pip
+# GitHub
+sudo apt install gh
+
 # QEMU
 #sudo apt install -y qemu-system-x86
 # Other necessary packages
